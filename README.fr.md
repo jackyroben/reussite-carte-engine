@@ -1,10 +1,16 @@
 # Moteur Réussite Carte
 
-Moteur JavaScript sans dépendance pour la réussite française en grille à 32 cartes, extrait de [Réussite Carte](https://reussite-carte.com/). [English documentation](README.md)
+[![Licence MIT](https://img.shields.io/badge/licence-MIT-blue.svg)](LICENSE)
+[![Dernière version](https://img.shields.io/github/v/release/jackyroben/reussite-carte-engine)](https://github.com/jackyroben/reussite-carte-engine/releases/latest)
+[![Tests du moteur](https://github.com/jackyroben/reussite-carte-engine/actions/workflows/tests.yml/badge.svg)](https://github.com/jackyroben/reussite-carte-engine/actions/workflows/tests.yml)
+
+Grid32 est un moteur JavaScript sans dépendance pour la réussite française en grille à 32 cartes. Il propose des donnes reproductibles, des transitions sans mutation et une sauvegarde compacte qui permet de rejouer une donne.
+
+[Site Réussite Carte](https://reussite-carte.com/) · [Intégration des widgets](https://reussite-carte.com/integrer/) · [Démonstration jouable](https://jackyroben.github.io/reussite-carte-engine/demo/) · [English documentation](README.md)
 
 ## Installation et démonstration
 
-Depuis votre application, installez une copie locale avec `npm install ../reussite-carte-engine`. Ouvrez directement `demo/index.html` dans votre navigateur pour jouer à la démonstration. Pour exécuter les tests, lancez `npm test` dans le moteur avec Node.js 22 ou plus récent.
+Clonez ce dépôt puis, depuis votre application, installez la copie locale avec `npm install ../reussite-carte-engine`. Vous pouvez jouer hors ligne en ouvrant `demo/index.html` dans votre navigateur. L’API Node et les tests nécessitent Node.js 22 ou plus récent.
 
 ```js
 const Grid32 = require("reussite-carte-engine");
@@ -44,3 +50,9 @@ La donne comprend 28 cartes cachées réparties en quatre rangées de couleur et
 - Le catalogue expose `cards`, `suits`, `ranks`, `byCell` et `gridSize`. Une carte contient son libellé français, sa valeur, sa couleur, son symbole et sa destination. La destination d’un 7 vaut `null`. Le résultat vaut `null`, `"won"` ou `"lost"`.
 
 Personnalisez l’apparence en CSS et utilisez `card.rank` et `card.suit` pour retrouver vos propres libellés. L’application hôte gère l’interface et la sauvegarde. Le moteur fonctionne sans DOM, sans réseau et sans stockage.
+
+Pour une iframe prête à l’emploi, choisissez votre jeu dans le [configurateur de widgets](https://reussite-carte.com/integrer/) et copiez son code HTML.
+
+## Développement
+
+Lancez `npm test` depuis le dépôt. Consultez le [journal des changements](CHANGELOG.md) et le [guide de contribution](CONTRIBUTING.md).

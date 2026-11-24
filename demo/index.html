@@ -3,27 +3,35 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Démonstration du moteur Réussite Carte</title>
-  <style>
-    body { margin: 2rem auto; max-width: 42rem; padding: 0 .75rem; font: 1rem/1.5 system-ui; color: #21382a; background: #f9f6ed; }
-    .row { display: grid; grid-template-columns: repeat(8, 1fr); gap: .2rem; margin-block: .2rem; }
-    .cell { text-align: center; padding-block: .5rem; background: #fff; border: 1px solid #b4bdaf; border-radius: .25rem; }
-    .hidden { color: #fff; background: #174d39; }
-    .red { color: #a02e43; }
-    button { padding: .5rem .75rem; font: inherit; }
-  </style>
+  <title>Grid32 · Démonstration du moteur JavaScript</title>
+  <meta name="description" content="Essayez Grid32 dans le navigateur et découvrez comment son API JavaScript gère une donne, les transitions et la fin de partie.">
+  <link rel="canonical" href="https://jackyroben.github.io/reussite-carte-engine/demo/">
+  <link rel="stylesheet" href="demo.css">
   <script src="../assets/grid32.js" defer></script>
   <script src="demo.js" defer></script>
 </head>
 <body>
-  <main>
-    <h1>Réussite à 32 cartes</h1>
-    <p>Chaque carte a sa place. Les 7 vont à gauche de la grille.</p>
-    <div id="grid" aria-label="Grille de jeu"></div>
-    <p id="status" role="status"></p>
-    <button type="button" id="next">Retourner une carte</button>
-    <button type="button" id="new">Nouvelle partie</button>
-    <p><a href="https://reussite-carte.com/">Propulsé par Réussite Carte</a></p>
+  <main class="shell">
+    <header>
+      <h1>Démonstration de Grid32</h1>
+      <p>Retournez une carte, puis placez-la pour découvrir la suivante. Les 7 vont à gauche et terminent la chaîne en cours.</p>
+    </header>
+    <section class="table" aria-label="Table de jeu">
+      <div id="grid" class="grid" role="group" aria-label="Grille de jeu"></div>
+      <p id="status" role="status" aria-atomic="true"></p>
+      <div class="controls">
+        <button type="button" id="next" disabled>Retourner une carte</button>
+        <button type="button" id="new" disabled>Nouvelle partie</button>
+      </div>
+      <noscript><p>Activez JavaScript pour essayer la démonstration.</p></noscript>
+    </section>
+    <nav aria-label="Ressources du projet">
+      <a href="https://reussite-carte.com/">Propulsé par Réussite Carte</a>
+      <a href="https://reussite-carte.com/integrer/">Intégrer un widget</a>
+      <a href="https://github.com/jackyroben/reussite-carte-engine/blob/main/README.fr.md">Documentation</a>
+      <a href="https://github.com/jackyroben/reussite-carte-engine#readme" lang="en">English documentation</a>
+      <a href="https://jackyroben.github.io/reussite-carte-engine/demo/widgets.html">Tester les iframes</a>
+    </nav>
   </main>
 </body>
 </html>

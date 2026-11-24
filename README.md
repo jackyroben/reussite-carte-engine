@@ -1,10 +1,16 @@
 # Réussite Carte Engine
 
-A dependency-free JavaScript engine for French 32-card grid solitaire, extracted from [Réussite Carte](https://reussite-carte.com/). [Documentation française](README.fr.md)
+[![MIT license](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![Latest release](https://img.shields.io/github/v/release/jackyroben/reussite-carte-engine)](https://github.com/jackyroben/reussite-carte-engine/releases/latest)
+[![Engine tests](https://github.com/jackyroben/reussite-carte-engine/actions/workflows/tests.yml/badge.svg)](https://github.com/jackyroben/reussite-carte-engine/actions/workflows/tests.yml)
+
+Grid32 is a dependency-free JavaScript engine for French 32-card grid solitaire. It supports reproducible deals, immutable state transitions, and compact saves that can replay a deal.
+
+[Réussite Carte website](https://reussite-carte.com/) · [Widget integration](https://reussite-carte.com/integrer/) · [Live engine demo](https://jackyroben.github.io/reussite-carte-engine/demo/) · [Documentation française](README.fr.md)
 
 ## Install and try it
 
-From your application, install a local checkout with `npm install ../reussite-carte-engine`. Open `demo/index.html` directly in a browser to play the reference demo. Run `npm test` from the engine checkout with Node.js 22 or newer.
+Clone this repository and install the local checkout from your app with `npm install ../reussite-carte-engine`. You can also open `demo/index.html` directly in a browser to play the demo offline. Node.js 22 or newer is required for the Node API and tests.
 
 ```js
 const { shuffledDeck, deal, advance, restoreSession } = require("reussite-carte-engine");
@@ -44,3 +50,9 @@ The deal contains 28 face-down cards in four suit rows and four reserve cards. D
 - The catalog exports `cards`, `suits`, `ranks`, `byCell` and `gridSize`. `result` is `null`, `"won"` or `"lost"`. A card includes its French label, rank, suit index, symbol, color and destination. Sevens have a `null` destination.
 
 Keep layout, translated labels and persistence in your application. For instance, use `card.rank` and `card.suit` to look up translated names, and CSS to style your table. The engine uses no DOM, network or storage.
+
+For a ready-made iframe, use the [widget configurator](https://reussite-carte.com/integrer/) to choose a game and copy its HTML.
+
+## Development
+
+Run `npm test` from the checkout. See the [changelog](CHANGELOG.md) and [contribution guide](CONTRIBUTING.md).

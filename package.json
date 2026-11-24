@@ -1,23 +1,36 @@
 {
   "name": "reussite-carte-engine",
-  "version": "0.1.0",
-  "description": "Dependency-free engine for French 32-card grid solitaire",
+  "version": "0.1.1",
+  "description": "Dependency-free JavaScript engine for French 32-card grid solitaire, with deterministic deals and replayable saves",
   "homepage": "https://reussite-carte.com/",
   "keywords": [
     "solitaire",
     "patience",
     "card-game",
-    "french-solitaire"
+    "french-solitaire",
+    "javascript",
+    "html5",
+    "game-engine",
+    "reussite"
   ],
   "license": "MIT",
-  "private": true,
   "main": "./assets/grid32.js",
   "exports": "./assets/grid32.js",
+  "engines": {
+    "node": ">=22"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
   "files": [
     "assets/grid32.js",
     "README.fr.md",
-    "demo/",
-    "tests/"
+    "CHANGELOG.md",
+    "CONTRIBUTING.md",
+    "demo/index.html",
+    "demo/demo.js",
+    "demo/demo.css"
   ],
   "scripts": {
     "test": "node --test"
