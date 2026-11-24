@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Démonstration du moteur Réussite Carte</title>
+  <style>
+    body { margin: 2rem auto; max-width: 42rem; padding: 0 .75rem; font: 1rem/1.5 system-ui; color: #21382a; background: #f9f6ed; }
+    .row { display: grid; grid-template-columns: repeat(8, 1fr); gap: .2rem; margin-block: .2rem; }
+    .cell { text-align: center; padding-block: .5rem; background: #fff; border: 1px solid #b4bdaf; border-radius: .25rem; }
+    .hidden { color: #fff; background: #174d39; }
+    .red { color: #a02e43; }
+    button { padding: .5rem .75rem; font: inherit; }
+  </style>
+  <script src="../assets/grid32.js" defer></script>
+  <script src="demo.js" defer></script>
+</head>
+<body>
+  <main>
+    <h1>Réussite à 32 cartes</h1>
+    <p>Chaque carte a sa place. Les 7 vont à gauche de la grille.</p>
+    <div id="grid" aria-label="Grille de jeu"></div>
+    <p id="status" role="status"></p>
+    <button type="button" id="next">Retourner une carte</button>
+    <button type="button" id="new">Nouvelle partie</button>
+    <p><a href="https://reussite-carte.com/">Propulsé par Réussite Carte</a></p>
+  </main>
+</body>
+</html>

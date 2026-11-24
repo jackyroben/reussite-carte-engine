@@ -1,0 +1,29 @@
+{
+  "name": "reussite-carte-engine",
+  "version": "0.1.0",
+  "description": "Dependency-free engine for French 32-card grid solitaire",
+  "homepage": "https://reussite-carte.com/",
+  "keywords": [
+    "solitaire",
+    "patience",
+    "card-game",
+    "french-solitaire"
+  ],
+  "license": "MIT",
+  "private": true,
+  "main": "./assets/grid32.js",
+  "exports": "./assets/grid32.js",
+  "files": [
+    "assets/grid32.js",
+    "README.fr.md",
+    "demo/",
+    "tests/"
+  ],
+  "scripts": {
+    "test": "node --test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jackyroben/reussite-carte-engine.git"
+  }
+}
